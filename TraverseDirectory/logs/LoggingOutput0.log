@@ -1,0 +1,8 @@
+Sep 26, 2018 1:33:24 AM SimpleLogging main
+INFO: Traversing Directories
+Sep 26, 2018 1:33:30 AM SimpleLogging main
+INFO: Valid Records:::::::201076
+Sep 26, 2018 1:33:30 AM SimpleLogging main
+INFO: Skipped Records:::::81834
+Sep 26, 2018 1:33:30 AM SimpleLogging main
+INFO: Total execution time for traversing:::::5422 ms
