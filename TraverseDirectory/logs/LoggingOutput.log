@@ -1,0 +1,10 @@
+Sep 26, 2018 8:18:52 PM SimpleLogging main
+CONFIG: Configuration done.
+Sep 26, 2018 8:18:52 PM SimpleLogging main
+INFO: Traversing Directories
+Sep 26, 2018 8:19:05 PM SimpleLogging main
+INFO: Valid Records:::::::201076
+Sep 26, 2018 8:19:05 PM SimpleLogging main
+INFO: Skipped Records:::::81834
+Sep 26, 2018 8:19:05 PM SimpleLogging main
+INFO: Total execution time for traversing:::::13168 ms

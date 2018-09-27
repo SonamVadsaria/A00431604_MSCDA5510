@@ -23,6 +23,7 @@ public class SimpleCsvParser
 					//To avoid Array out of bound Exception
 					if(record.size()==10)
 					{
+
 						String FirstName = record.get(0);
 						String LastName = record.get(1);
 						String StreetNumber = record.get(2);
@@ -33,21 +34,20 @@ public class SimpleCsvParser
 						String Country = record.get(7);
 						String PhoneNumber = record.get(8);
 						String emailAddress = record.get(9);
+						
+						if(validrecords==0)//print header once
+                        {
+							validrecords++;
+                            csvPrinter.printRecord("date",FirstName,LastName,StreetNumber,Street,City,Province,PostalCode,Country,PhoneNumber,emailAddress);//logic to merge into one csv file
+                        }
 
 						//if records are not empty print in CSV File
 						if (!FirstName.isEmpty() && !LastName.isEmpty() && !PostalCode.isEmpty() && !emailAddress.isEmpty() && !Street.isEmpty() && !City.isEmpty() && !Province.isEmpty())
 						{
-							if(validrecords==0)//print header once
-							{
-								validrecords++;
-								csvPrinter.printRecord("date",FirstName,LastName,StreetNumber,Street,City,Province,PostalCode,Country,PhoneNumber,emailAddress
-										);//logic to merge into one csv file
-							}
 							if(!FirstName.equals("First Name"))//if record is not header than print in CSV File
 							{
 								validrecords++;
-								csvPrinter.printRecord(date,FirstName,LastName,StreetNumber,Street,City,Province,PostalCode,Country,PhoneNumber,emailAddress
-										);
+								csvPrinter.printRecord(date,FirstName,LastName,StreetNumber,Street,City,Province,PostalCode,Country,PhoneNumber,emailAddress);
 							}
 							else
 								continue;
@@ -77,5 +77,3 @@ public class SimpleCsvParser
 		}
 	}
 }
-
-

@@ -4,72 +4,56 @@ import java.util.logging.Logger;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVFormat;
 
-public class DirWalker extends SimpleCsvParser 
-{
-	public void walk( String path ) throws Exception 
+	public class DirWalker extends SimpleCsvParser 
 	{
-		File root = new File( path );
-		File[] list = root.listFiles();
 
-		if (list == null) return;
-
-		File  outputfile=new File("C:\\\\Users\\\\Sonam\\\\eclipse-workspace\\\\TraverseDirectory\\\\Output\\Mergedfile.csv");
-		try 
+	static Boolean outputexist = false;
+		public void walk( String path, File outputfile,PrintWriter pw ) throws Exception 
 		{
-			if(outputfile.exists())
+			File root = new File( path );
+			File[] list = root.listFiles();
+
+			if (list == null) return;
+	
+
+			CSVPrinter csvPrinter= new CSVPrinter(pw,CSVFormat.DEFAULT);
+
+			SimpleCsvParser cp = new SimpleCsvParser();
+
+			try
 			{
-				outputfile.delete();
-			}
-		}
-		catch(Exception e)
-		{
-			Logger.getLogger("Main").log(Level.SEVERE, "Exception thrown: "+e.getMessage(),e);
-		}
-
-		PrintWriter pw = new PrintWriter(new FileOutputStream(outputfile, true /* for appending CSV files in one file*/)); 
-
-		CSVPrinter csvPrinter= new CSVPrinter(pw,CSVFormat.DEFAULT);
-
-		SimpleCsvParser cp = new SimpleCsvParser();
-
-		try
-		{
-			for (File f : list) 
-			{
-				if (f.isDirectory()) 
+				for (File f : list) 
 				{
-					walk(f.getAbsolutePath());
-				}
-				else 
-				{
-					String filename=f.getParent().toString();
-					String date=filename.substring(filename.lastIndexOf("\\")-7);
-					date=date.replace("\\", "/");
-					if(date.startsWith("/"))
+					if (f.isDirectory()) 
 					{
-						date=date.replaceFirst("/", "");
+						walk(f.getAbsolutePath(),outputfile,pw);
 					}
-
-//					System.out.println("File Name"+filename);
-//					System.out.println("File date"+date);
-					//Calling CSV Parser to read and merge CSV files
-					if(f.getAbsolutePath().endsWith(".csv"))
+					else 
 					{
-						cp.CSVParser(f.getAbsolutePath(),csvPrinter,date);
+						String filename=f.getParent().toString();
+						//String date=filename.substring(filename.lastIndexOf("/")-7);//uncomment for windows
+						String date=filename.substring(filename.lastIndexOf("/")-7);
+	//					date=date.replace("\\", "/");//uncomment for windows
+						if(date.startsWith("/"))
+						{
+							date=date.replaceFirst("/", "");
+						}
+
+						//Calling CSV Parser to read and merge CSV files
+						if(f.getAbsolutePath().endsWith(".csv"))
+						{
+							cp.CSVParser(f.getAbsolutePath(),csvPrinter,date);
+
+						}
 					}
 				}
+
+			}
+			catch(Exception e)
+			{
+				Logger.getLogger("Main").log(Level.SEVERE, "Exception thrown: "+e.getMessage(),e);
 			}
 
-		}
-		catch(Exception e)
-		{
-			Logger.getLogger("Main").log(Level.SEVERE, "Exception thrown: "+e.getMessage(),e);
-		}
-		finally
-		{
-			csvPrinter.close();
-			pw.close();
 		}
 	}
-}
 
