@@ -1,0 +1,56 @@
+Oct 15, 2018 11:58:46 PM Assignment2 main
+CONFIG: Configuration done.
+Oct 15, 2018 11:58:59 PM MySQLAccess setupConnection
+INFO: Database connected successfully!!!
+Oct 15, 2018 11:59:07 PM MySQLAccess removeTransaction
+INFO: Deleting Record
+Oct 15, 2018 11:59:25 PM Assignment2 main
+INFO: Transaction Record deleted successfully!
+Oct 15, 2018 11:59:31 PM MySQLAccess removeTransaction
+INFO: Deleting Record
+Oct 15, 2018 11:59:36 PM MySQLAccess removeTransaction
+INFO: ID does not exist in DB to be deleted!
+Oct 16, 2018 12:00:22 AM MySQLAccess createTransaction
+INFO: Inserting Record
+Oct 16, 2018 12:00:22 AM Assignment2 main
+INFO: Transaction Record inserted successfully!
+Oct 16, 2018 12:00:27 AM MySQLAccess getTransaction
+INFO: Viewing Specific Record
+Oct 16, 2018 12:00:29 AM Assignment2 main
+INFO: [ID :2 NameOnCard: Morgan,CardNumber: 4045676789899900,CardType: Visa, UnitPrice: 12.0, Quantity: 56 , TotalPrice : 692.0, ExpDate:02/2025 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:00:36 AM MySQLAccess getAllTransactions
+INFO: Viewing all Records!
+Oct 16, 2018 12:00:36 AM Assignment2 main
+INFO: [ID :1 NameOnCard: Sonam,CardNumber: 5150607088989090,CardType: Master Card, UnitPrice: 10.0, Quantity: 20 , TotalPrice : 200.0, ExpDate:01/2019 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:00:36 AM Assignment2 main
+INFO: [ID :2 NameOnCard: Morgan,CardNumber: 4045676789899900,CardType: Visa, UnitPrice: 12.0, Quantity: 56 , TotalPrice : 692.0, ExpDate:02/2025 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:01:32 AM MySQLAccess updateTransaction
+INFO: Updating Record
+Oct 16, 2018 12:01:32 AM MySQLAccess updateTransaction
+INFO: ID does not exist in DB please create record!
+Oct 16, 2018 12:01:43 AM MySQLAccess getAllTransactions
+INFO: Viewing all Records!
+Oct 16, 2018 12:01:43 AM Assignment2 main
+INFO: [ID :1 NameOnCard: Sonam,CardNumber: 5150607088989090,CardType: Master Card, UnitPrice: 10.0, Quantity: 20 , TotalPrice : 200.0, ExpDate:01/2019 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:01:43 AM Assignment2 main
+INFO: [ID :2 NameOnCard: Morgan,CardNumber: 4045676789899900,CardType: Visa, UnitPrice: 12.0, Quantity: 56 , TotalPrice : 692.0, ExpDate:02/2025 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:03:33 AM MySQLAccess updateTransaction
+INFO: Updating Record
+Oct 16, 2018 12:03:33 AM Assignment2 main
+INFO: Transaction Record updated successfully!
+Oct 16, 2018 12:04:14 AM MySQLAccess createTransaction
+INFO: Inserting Record
+Oct 16, 2018 12:04:14 AM MySQLAccess createTransaction
+INFO: ID exists in DB please use update records!
+Oct 16, 2018 12:05:27 AM MySQLAccess createTransaction
+INFO: Inserting Record
+Oct 16, 2018 12:05:27 AM Assignment2 main
+INFO: Transaction Record inserted successfully!
+Oct 16, 2018 12:05:33 AM MySQLAccess getAllTransactions
+INFO: Viewing all Records!
+Oct 16, 2018 12:05:33 AM Assignment2 main
+INFO: [ID :1 NameOnCard: Sonam,CardNumber: 5150607088989090,CardType: Master Card, UnitPrice: 10.0, Quantity: 20 , TotalPrice : 200.0, ExpDate:01/2019 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:05:33 AM Assignment2 main
+INFO: [ID :2 NameOnCard: Roy,CardNumber: 4045676789899901,CardType: Visa, UnitPrice: 13.0, Quantity: 14 , TotalPrice : 175.0, ExpDate:03/2031 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
+Oct 16, 2018 12:05:33 AM Assignment2 main
+INFO: [ID :3 NameOnCard: Rohan,CardNumber: 3440565789899090,CardType: American Express, UnitPrice: 16.0, Quantity: 67 , TotalPrice : 1045.0, ExpDate:09/2028 , CreatedOn: 2018-10-15, CreatedBy: sonamvadsaria]
