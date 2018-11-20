@@ -1,0 +1,496 @@
+19-Nov-2018 14:36:18.425 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.12
+19-Nov-2018 14:36:18.429 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:13:41 UTC
+19-Nov-2018 14:36:18.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.12.0
+19-Nov-2018 14:36:18.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2018 14:36:18.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-138-generic
+19-Nov-2018 14:36:18.430 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2018 14:36:18.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+19-Nov-2018 14:36:18.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_77-b03
+19-Nov-2018 14:36:18.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2018 14:36:18.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:36:18.431 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:36:18.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/conf/logging.properties
+19-Nov-2018 14:36:18.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2018 14:36:18.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2018 14:36:18.432 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2018 14:36:18.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2018 14:36:18.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2018 14:36:18.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:36:18.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:36:18.433 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/temp
+19-Nov-2018 14:36:18.434 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2018 14:36:18.721 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9200"]
+19-Nov-2018 14:36:18.744 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[HTTP/1.1-9200]]
+ org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:935)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:852)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:633)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:656)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:306)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:491)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1044)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:540)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:74)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:932)
+	... 13 more
+
+19-Nov-2018 14:36:18.747 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8200"]
+19-Nov-2018 14:36:18.749 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector[AJP/1.3-8200]]
+ org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:935)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:852)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:633)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:656)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:306)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:491)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1044)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:540)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:932)
+	... 13 more
+
+19-Nov-2018 14:36:18.750 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1644 ms
+19-Nov-2018 14:36:18.865 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2018 14:36:18.865 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.12
+19-Nov-2018 14:36:18.939 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war]
+19-Nov-2018 14:36:20.875 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-19 14:36:21 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+19-Nov-2018 14:36:21.607 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war] has finished in [2,668] ms
+19-Nov-2018 14:36:21.609 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/Assignment3.war]
+19-Nov-2018 14:36:22.419 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+log4j:WARN No appenders could be found for logger (org.apache.axis.transport.http.AxisServlet).
+log4j:WARN Please initialize the log4j system properly.
+19-Nov-2018 14:36:23.171 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/Assignment3.war] has finished in [1,562] ms
+19-Nov-2018 14:36:23.172 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war]
+19-Nov-2018 14:36:23.682 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:36:23.687 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war] has finished in [514] ms
+19-Nov-2018 14:36:23.688 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/host-manager]
+19-Nov-2018 14:36:23.984 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:36:23.993 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/host-manager] has finished in [305] ms
+19-Nov-2018 14:36:23.994 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/manager]
+19-Nov-2018 14:36:24.367 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:36:24.371 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/manager] has finished in [378] ms
+19-Nov-2018 14:36:24.372 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/ROOT]
+19-Nov-2018 14:36:24.875 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:36:24.881 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/ROOT] has finished in [509] ms
+19-Nov-2018 14:36:24.882 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/docs]
+19-Nov-2018 14:36:25.383 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:36:25.387 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/docs] has finished in [505] ms
+19-Nov-2018 14:36:25.388 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/examples]
+19-Nov-2018 14:36:26.130 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:36:26.203 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/examples] has finished in [815] ms
+19-Nov-2018 14:36:26.209 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 7458 ms
+19-Nov-2018 14:37:53.848 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Nov-2018 14:37:53.850 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9200"]
+19-Nov-2018 14:37:53.850 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8200"]
+19-Nov-2018 14:37:53.850 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Nov-2018 14:37:53.942 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sonam-webservices] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:70)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+19-Nov-2018 14:37:53.954 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9200"]
+19-Nov-2018 14:37:53.954 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9200"]
+19-Nov-2018 14:37:53.955 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8200"]
+19-Nov-2018 14:37:53.955 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8200"]
+19-Nov-2018 14:37:59.805 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.12
+19-Nov-2018 14:37:59.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:13:41 UTC
+19-Nov-2018 14:37:59.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.12.0
+19-Nov-2018 14:37:59.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Nov-2018 14:37:59.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-138-generic
+19-Nov-2018 14:37:59.810 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Nov-2018 14:37:59.811 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+19-Nov-2018 14:37:59.811 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_77-b03
+19-Nov-2018 14:37:59.811 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Nov-2018 14:37:59.811 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:37:59.811 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:37:59.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/conf/logging.properties
+19-Nov-2018 14:37:59.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Nov-2018 14:37:59.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Nov-2018 14:37:59.812 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Nov-2018 14:37:59.813 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Nov-2018 14:37:59.813 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Nov-2018 14:37:59.813 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:37:59.813 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12
+19-Nov-2018 14:37:59.813 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/temp
+19-Nov-2018 14:37:59.814 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Nov-2018 14:38:00.099 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-9200"]
+19-Nov-2018 14:38:00.125 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2018 14:38:00.142 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8200"]
+19-Nov-2018 14:38:00.145 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Nov-2018 14:38:00.146 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1091 ms
+19-Nov-2018 14:38:00.197 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Nov-2018 14:38:00.198 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.12
+19-Nov-2018 14:38:00.244 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war]
+19-Nov-2018 14:38:01.905 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-19 14:38:02 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+19-Nov-2018 14:38:02.601 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war] has finished in [2,356] ms
+19-Nov-2018 14:38:02.603 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/Assignment3.war]
+19-Nov-2018 14:38:03.554 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+log4j:WARN No appenders could be found for logger (org.apache.axis.transport.http.AxisServlet).
+log4j:WARN Please initialize the log4j system properly.
+19-Nov-2018 14:38:04.113 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/Assignment3.war] has finished in [1,511] ms
+19-Nov-2018 14:38:04.114 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war]
+19-Nov-2018 14:38:04.663 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:38:04.691 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war] has finished in [577] ms
+19-Nov-2018 14:38:04.693 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/host-manager]
+19-Nov-2018 14:38:05.021 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:38:05.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/host-manager] has finished in [338] ms
+19-Nov-2018 14:38:05.032 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/manager]
+19-Nov-2018 14:38:05.430 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:38:05.436 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/manager] has finished in [403] ms
+19-Nov-2018 14:38:05.436 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/ROOT]
+19-Nov-2018 14:38:05.856 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:38:05.860 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/ROOT] has finished in [424] ms
+19-Nov-2018 14:38:05.861 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/docs]
+19-Nov-2018 14:38:06.261 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:38:06.265 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/docs] has finished in [403] ms
+19-Nov-2018 14:38:06.265 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/examples]
+19-Nov-2018 14:38:06.914 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:38:06.998 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/examples] has finished in [733] ms
+19-Nov-2018 14:38:07.006 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-9200"]
+19-Nov-2018 14:38:07.026 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8200"]
+19-Nov-2018 14:38:07.031 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 6884 ms
+2018-11-19 14:39:14 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:39:14 INFO  MySQLAccess:50 - Inserting Record
+2018-11-19 14:39:14 INFO  MySQLAccess:82 - Exception thrown: Can not issue empty query.
+java.sql.SQLException: Can not issue empty query.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.StatementImpl.checkNullOrEmptyQuery(StatementImpl.java:404)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1271)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2127)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1264)
+	at com.dpenny.mcda5510.dao.MySQLAccess.createTransaction(MySQLAccess.java:71)
+	at com.dpenny.sonam.mcda5510.service.TrxnWebService.createTransaction(TrxnWebService.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.axis.providers.java.RPCProvider.invokeMethod(RPCProvider.java:397)
+	at org.apache.axis.providers.java.RPCProvider.processMessage(RPCProvider.java:186)
+	at org.apache.axis.providers.java.JavaProvider.invoke(JavaProvider.java:323)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.handlers.soap.SOAPService.invoke(SOAPService.java:454)
+	at org.apache.axis.server.AxisServer.invoke(AxisServer.java:281)
+	at org.apache.axis.transport.http.AxisServlet.doPost(AxisServlet.java:699)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.apache.axis.transport.http.AxisServletBase.service(AxisServletBase.java:327)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:668)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+19-Nov-2018 14:41:37.636 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/sonam-webservices]
+19-Nov-2018 14:41:37.649 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [sonam-webservices] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+19-Nov-2018 14:41:37.651 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sonam-webservices] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:70)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+19-Nov-2018 14:41:38.627 INFO [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+ java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1006)
+	at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:96)
+	at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:69)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Nov-2018 14:41:57.695 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war]
+19-Nov-2018 14:41:58.526 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-19 14:41:58 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+19-Nov-2018 14:41:59.105 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war] has finished in [1,410] ms
+2018-11-19 14:42:02 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:42:02 INFO  MySQLAccess:50 - Inserting Record
+2018-11-19 14:42:03 INFO  MySQLAccess:82 - Exception thrown: Table 's_vadsaria.transaction1' doesn't exist
+java.sql.SQLSyntaxErrorException: Table 's_vadsaria.transaction1' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1062)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1383)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1047)
+	at com.dpenny.mcda5510.dao.MySQLAccess.createTransaction(MySQLAccess.java:71)
+	at com.dpenny.sonam.mcda5510.service.TrxnWebService.createTransaction(TrxnWebService.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.axis.providers.java.RPCProvider.invokeMethod(RPCProvider.java:397)
+	at org.apache.axis.providers.java.RPCProvider.processMessage(RPCProvider.java:186)
+	at org.apache.axis.providers.java.JavaProvider.invoke(JavaProvider.java:323)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.handlers.soap.SOAPService.invoke(SOAPService.java:454)
+	at org.apache.axis.server.AxisServer.invoke(AxisServer.java:281)
+	at org.apache.axis.transport.http.AxisServlet.doPost(AxisServlet.java:699)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.apache.axis.transport.http.AxisServletBase.service(AxisServletBase.java:327)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:668)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2018-11-19 14:42:28 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:42:28 INFO  MySQLAccess:50 - Inserting Record
+2018-11-19 14:42:28 INFO  MySQLAccess:82 - Exception thrown: Table 's_vadsaria.transaction1' doesn't exist
+java.sql.SQLSyntaxErrorException: Table 's_vadsaria.transaction1' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:975)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1062)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1383)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1047)
+	at com.dpenny.mcda5510.dao.MySQLAccess.createTransaction(MySQLAccess.java:71)
+	at com.dpenny.sonam.mcda5510.service.TrxnWebService.createTransaction(TrxnWebService.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.axis.providers.java.RPCProvider.invokeMethod(RPCProvider.java:397)
+	at org.apache.axis.providers.java.RPCProvider.processMessage(RPCProvider.java:186)
+	at org.apache.axis.providers.java.JavaProvider.invoke(JavaProvider.java:323)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.handlers.soap.SOAPService.invoke(SOAPService.java:454)
+	at org.apache.axis.server.AxisServer.invoke(AxisServer.java:281)
+	at org.apache.axis.transport.http.AxisServlet.doPost(AxisServlet.java:699)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.apache.axis.transport.http.AxisServletBase.service(AxisServletBase.java:327)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:668)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+19-Nov-2018 14:44:19.671 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/sonam-webservices]
+19-Nov-2018 14:44:19.681 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [sonam-webservices] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+19-Nov-2018 14:44:19.686 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sonam-webservices] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:70)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+19-Nov-2018 14:44:22.663 INFO [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+ java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1006)
+	at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:96)
+	at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:69)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Nov-2018 14:44:49.728 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war]
+19-Nov-2018 14:44:50.505 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-19 14:44:51 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+19-Nov-2018 14:44:51.249 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war] has finished in [1,520] ms
+2018-11-19 14:44:56 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:44:56 INFO  MySQLAccess:50 - Inserting Record
+2018-11-19 14:45:29 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:45:29 INFO  MySQLAccess:99 - Updating Record
+2018-11-19 14:45:40 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:45:40 INFO  MySQLAccess:237 - Viewing all Records!
+2018-11-19 14:45:52 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:45:52 INFO  MySQLAccess:146 - Deleting Record
+2018-11-19 14:45:57 INFO  MySQLAccess:39 - Database connected successfully!!!
+2018-11-19 14:45:57 INFO  MySQLAccess:237 - Viewing all Records!
+19-Nov-2018 14:51:51.904 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Assignment3]
+19-Nov-2018 14:51:52.492 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/sonam-webservices]
+19-Nov-2018 14:51:52.497 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [sonam-webservices] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+19-Nov-2018 14:51:52.499 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [sonam-webservices] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:70)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+19-Nov-2018 14:51:56.659 INFO [Abandoned connection cleanup thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+ java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1329)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1006)
+	at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkContextClassLoaders(AbandonedConnectionCleanupThread.java:96)
+	at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:69)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Nov-2018 14:52:03.022 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/sonam-webservicesClient]
+19-Nov-2018 14:52:43.077 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war]
+19-Nov-2018 14:52:43.918 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-11-19 14:52:44 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+19-Nov-2018 14:52:44.426 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservices.war] has finished in [1,349] ms
+19-Nov-2018 14:52:44.428 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war]
+19-Nov-2018 14:52:45.078 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 14:52:45.085 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war] has finished in [656] ms
+2018-11-19 15:12:54 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:12:54 INFO  MySQLAccess:237 - Viewing all Records!
+2018-11-19 15:12:55 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:12:55 INFO  MySQLAccess:237 - Viewing all Records!
+2018-11-19 15:12:59 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:12:59 INFO  MySQLAccess:237 - Viewing all Records!
+2018-11-19 15:13:01 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:13:01 INFO  MySQLAccess:237 - Viewing all Records!
+2018-11-19 15:13:55 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:13:55 INFO  MySQLAccess:51 - Inserting Record
+2018-11-19 15:14:12 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:14:12 INFO  MySQLAccess:237 - Viewing all Records!
+2018-11-19 15:14:38 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 15:14:38 INFO  MySQLAccess:100 - Updating Record
+19-Nov-2018 15:33:56.352 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/sonam-webservicesClient]
+19-Nov-2018 15:33:56.378 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks Failed to check for ThreadLocal references for web application [sonam-webservicesClient]
+ java.lang.IllegalStateException: java.io.FileNotFoundException: /home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient/WEB-INF/lib/axis.jar (No such file or directory)
+	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:101)
+	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:256)
+	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:281)
+	at org.apache.catalina.webresources.Cache.getResource(Cache.java:62)
+	at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:216)
+	at org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:225)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2241)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:833)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1278)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1138)
+	at java.lang.Class.getDeclaringClass0(Native Method)
+	at java.lang.Class.getDeclaringClass(Class.java:1235)
+	at java.lang.Class.getEnclosingClass(Class.java:1277)
+	at java.lang.Class.getCanonicalName(Class.java:1392)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getPrettyClassName(WebappClassLoaderBase.java:2011)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks(WebappClassLoaderBase.java:1963)
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalsForLeaks(WebappClassLoaderBase.java:1903)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1571)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1497)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:442)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5367)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:834)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1434)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1360)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1620)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:304)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1176)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1398)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1402)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1370)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient/WEB-INF/lib/axis.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:164)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:149)
+	at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:307)
+	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:97)
+	... 33 more
+
+19-Nov-2018 15:34:16.400 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war]
+19-Nov-2018 15:34:17.517 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 15:34:17.532 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war] has finished in [1,132] ms
+19-Nov-2018 15:40:08.123 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/sonam-webservicesClient]
+19-Nov-2018 15:40:58.158 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war]
+19-Nov-2018 15:40:58.839 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Nov-2018 15:40:58.844 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/student_2018_fall/s_vadsaria/Tomcat/temp/apache-tomcat-9.0.12/webapps/sonam-webservicesClient.war] has finished in [686] ms

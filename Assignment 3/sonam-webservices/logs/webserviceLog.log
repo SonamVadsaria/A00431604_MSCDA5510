@@ -1,0 +1,5 @@
+2018-11-19 13:49:43 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+2018-11-19 13:50:29 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+2018-11-19 13:51:12 INFO  MySQLAccess:40 - Database connected successfully!!!
+2018-11-19 13:51:12 INFO  MySQLAccess:238 - Viewing all Records!
+2018-11-19 13:56:02 WARN  JavaUtils:1308 - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.

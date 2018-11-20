@@ -1,0 +1,142 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TrxnWebServiceService WSDL service -->
+
+  <service name="TrxnWebService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.mcda5510.sonam.dpenny.com"/>
+      <parameter name="wsdlServiceElement" value="TrxnWebServiceService"/>
+      <parameter name="schemaQualified" value="http://service.mcda5510.sonam.dpenny.com"/>
+      <parameter name="wsdlServicePort" value="TrxnWebService"/>
+      <parameter name="className" value="com.dpenny.sonam.mcda5510.service.TrxnWebServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="TrxnWebService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getTransaction" qname="operNS:getTransaction" xmlns:operNS="http://service.mcda5510.sonam.dpenny.com" returnQName="retNS:getTransactionReturn" xmlns:retNS="http://service.mcda5510.sonam.dpenny.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:trxnID" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="createTransaction" qname="operNS:createTransaction" xmlns:operNS="http://service.mcda5510.sonam.dpenny.com" returnQName="retNS:createTransactionReturn" xmlns:retNS="http://service.mcda5510.sonam.dpenny.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:ID" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:nameOnCard" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:cardNumber" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:cardType" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:unitPrice" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:quantity" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:totalPrice" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:expDate" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="updateTransaction" qname="operNS:updateTransaction" xmlns:operNS="http://service.mcda5510.sonam.dpenny.com" returnQName="retNS:updateTransactionReturn" xmlns:retNS="http://service.mcda5510.sonam.dpenny.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:ID" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:nameOnCard" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:cardNumber" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:cardType" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:unitPrice" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:quantity" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:totalPrice" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:expDate" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="removeTransaction" qname="operNS:removeTransaction" xmlns:operNS="http://service.mcda5510.sonam.dpenny.com" returnQName="retNS:removeTransactionReturn" xmlns:retNS="http://service.mcda5510.sonam.dpenny.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAllTransactions" qname="operNS:getAllTransactions" xmlns:operNS="http://service.mcda5510.sonam.dpenny.com" returnQName="retNS:getAllTransactionsReturn" xmlns:retNS="http://service.mcda5510.sonam.dpenny.com" returnType="rtns:ArrayOf_xsd_anyType" xmlns:rtns="http://service.mcda5510.sonam.dpenny.com" returnItemQName="tns:item" xmlns:tns="http://service.mcda5510.sonam.dpenny.com" soapAction="" >
+        <parameter qname="pns:Id" xmlns:pns="http://service.mcda5510.sonam.dpenny.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getAllTransactions updateTransaction removeTransaction createTransaction getTransaction"/>
+
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>getAllTransactions"
+        type="java:com.dpenny.sonam.mcda5510.service.GetAllTransactions"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>removeTransaction"
+        type="java:com.dpenny.sonam.mcda5510.service.RemoveTransaction"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>removeTransactionResponse"
+        type="java:com.dpenny.sonam.mcda5510.service.RemoveTransactionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>getTransaction"
+        type="java:com.dpenny.sonam.mcda5510.service.GetTransaction"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>updateTransactionResponse"
+        type="java:com.dpenny.sonam.mcda5510.service.UpdateTransactionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>updateTransaction"
+        type="java:com.dpenny.sonam.mcda5510.service.UpdateTransaction"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>createTransaction"
+        type="java:com.dpenny.sonam.mcda5510.service.CreateTransaction"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>getAllTransactionsResponse"
+        type="java:com.dpenny.sonam.mcda5510.service.GetAllTransactionsResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>createTransactionResponse"
+        type="java:com.dpenny.sonam.mcda5510.service.CreateTransactionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:ArrayOf_xsd_anyType"
+        type="java:java.lang.Object[]"
+        innerType="cmp-ns:anyType" xmlns:cmp-ns="http://www.w3.org/2001/XMLSchema"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.mcda5510.sonam.dpenny.com"
+        qname="ns:>getTransactionResponse"
+        type="java:com.dpenny.sonam.mcda5510.service.GetTransactionResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
